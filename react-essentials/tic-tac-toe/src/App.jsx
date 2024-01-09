@@ -24,25 +24,24 @@ function App() {
   }
 
   return (
-    <div id="game-container">
-      <ol id="players" className="highlight-player">
-        <Player
-          initialName="Player 1"
-          symbol="X"
-          isActive={activePlayer === "X"}
-        ></Player>
-        <Player
-          initialName="Player 2"
-          symbol="O"
-          isActive={activePlayer === "O"}
-        ></Player>
-      </ol>
-      <GameBoard
-        onSelectSquare={handleSelectSquare}
-        activePlayerSymbol={activePlayer}
-      />
+    <main>
+      <div id="game-container">
+        <ol id="players" className="highlight-player">
+          <Player
+            initialName="Player 1"
+            symbol="X"
+            isActive={activePlayer === "X"}
+          ></Player>
+          <Player
+            initialName="Player 2"
+            symbol="O"
+            isActive={activePlayer === "O"}
+          ></Player>
+        </ol>
+        <GameBoard onSelectSquare={handleSelectSquare} turns={gameTurns} />
+      </div>
       <Log />
-    </div>
+    </main>
   );
 }
 
