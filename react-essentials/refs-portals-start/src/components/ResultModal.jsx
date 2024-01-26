@@ -7,8 +7,12 @@ const ResultModal = forwardRef(function ResultModal(
   const dialog = useRef();
   useImperativeHandle(ref, () => {
     return {
-      open() {
-        dialog.current.showModal();
+      open: () => {
+        try {
+          dialog.current.showModal();
+        } catch (error) {
+          console.log("Couldn't open modal or modal is already open.");
+        }
       },
     };
   });
