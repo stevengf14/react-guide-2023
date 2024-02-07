@@ -48,11 +48,16 @@ function App() {
     });
 
     const storedIds = localStorage.getItem("selectedPlaces") || [];
-    if (storedIds.indexOf(id) === -1) {
-      localStorage.setItem(
-        "selectedPlaces",
-        JSON.stringify([id, ...storedIds])
-      );
+    if (storedIds && storedIds.length > 0) {
+      const parsedIds = JSON.parse(storedIds);
+      if (parsedIds.indexOf(id) === -1) {
+        localStorage.setItem(
+          "selectedPlaces",
+          JSON.stringify([...parsedIds, id])
+        );
+      }
+    } else {
+      localStorage.setItem("selectedPlaces", JSON.stringify([id]));
     }
   }
 
@@ -63,9 +68,10 @@ function App() {
     setModalIsOpen(false);
 
     const storedIds = localStorage.getItem("selectedPlaces") || [];
+    const parsedIds = JSON.parse(storedIds);
     localStorage.setItem(
       "selectedPlaces",
-      JSON.stringify(storedIds.filter((id) => id !== selectedPlace.current))
+      JSON.stringify(parsedIds.filter((id) => id !== selectedPlace.current))
     );
   }
 
