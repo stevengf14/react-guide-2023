@@ -5,7 +5,6 @@ import Header from './components/Header.jsx';
 import { log } from './log.js';
 
 function App() {
-  log('<App /> rendered');
 
   const [enteredNumber, setEnteredNumber] = useState(0);
   const [chosenCount, setChosenCount] = useState(0);
