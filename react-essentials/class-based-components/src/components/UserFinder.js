@@ -5,7 +5,7 @@ import classes from "./UserFinder.module.css";
 import UsersContext from "../store/users-context";
 
 class UserFinder extends Component {
-  static contextType = Users;
+  static contextType = UsersContext;
 
   constructor() {
     super();
