@@ -1,6 +1,10 @@
 export default function Login() {
+  function handleSubmtit(event) {
+    event.preventDefault();
+    console.log("Submitted");
+  }
   return (
-    <form>
+    <form onSubmit={handleSubmtit}>
       <h2>Login</h2>
 
       <div className="control-row">
@@ -17,7 +21,9 @@ export default function Login() {
 
       <p className="form-actions">
         <button className="button button-flat">Reset</button>
-        <button className="button">Login</button>
+        <button className="button" onClick={handleSubmtit}>
+          Login
+        </button>
       </p>
     </form>
   );
