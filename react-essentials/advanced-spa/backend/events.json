@@ -1,6 +1,27 @@
 {
   "events": [
     {
+      "title": "Champions League",
+      "image": "https://ak.uecdn.es/p/110/thumbnail/entry_id/0_ytq2s11c/width/1200/type/2/bgcolor/000000/0_ytq2s11c.jpg",
+      "date": "2024-04-09",
+      "description": "Real Madrid vs Man. City",
+      "id": "d9e4ddd7-88da-40e9-9203-be625026cef8"
+    },
+    {
+      "title": "My 2024 vacations",
+      "image": "https://c8.alamy.com/compes/k66ybt/ruhr-valle-hengstey-lago-volme-desembocadura-en-la-region-de-nuevo-puente-de-volme-surgir-hagen-ruhr-area-renania-del-norte-westfalia-alemania-europa-hagen-a-k66ybt.jpg",
+      "date": "2024-08-10",
+      "description": "My trip to Europe part 3",
+      "id": "bee99ef0-346a-4528-805b-f29db8bec855"
+    },
+    {
+      "title": "Gym Event",
+      "image": "https://i.blogs.es/399dc4/the-rock--644x362/650_1200.webp",
+      "date": "2024-04-07",
+      "description": "The best gym event ever!",
+      "id": "cb16a16a-49e2-4cbc-952b-bf09c80d09da"
+    },
+    {
       "id": "e1",
       "title": "A dummy event",
       "date": "2023-02-22",
