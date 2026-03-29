@@ -9,8 +9,8 @@ body {
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#29251c, #2c2306);
-  color: #d9e2f1;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  color: #e2e8f0;
   min-height: 100vh;
 }
 
@@ -84,11 +84,20 @@ h1 {
 }
 
 .meal-item {
-  background-color: #1d1a16;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
 }
 
 .meal-item article {
@@ -234,6 +243,8 @@ h1 {
   color: #1f1a09;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .button:hover,
@@ -241,6 +252,8 @@ h1 {
   background-color: #ffab04;
   border-color: #ffab04;
   color: #1f1a09;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 171, 4, 0.4);
 }
 
 .text-button {

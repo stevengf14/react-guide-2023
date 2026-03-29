@@ -29,7 +29,7 @@ function App() {
       {inputIsValid ? (
         <Results input={userInput} />
       ) : (
-        <p className="center">Please enter a duration greaetr than zero.</p>
+        <p className="center">Please enter a duration greater than zero.</p>
       )}
     </>
   );

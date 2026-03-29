@@ -98,7 +98,7 @@ export default function Checkout() {
         <Input label="Street" type="text" id="street" />
         <div className="control-row">
           <Input label="Postal Code" type="text" id="postal-code" />
-          <Input label="City" type="test" id="city" />
+          <Input label="City" type="text" id="city" />
         </div>
         {error && <Error title="Failed to submit order" message={error} />}
         <p className="modal-actions">{actions}</p>

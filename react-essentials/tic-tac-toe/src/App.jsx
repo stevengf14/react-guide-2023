@@ -8,20 +8,20 @@ import GameOver from "./components/GameOver";
 // CONSTANTS
 import { PLAYERS } from "./constants/appConstants";
 // UTILS
-import { derivaActivePlayer, deriveGameBoard, deriveWinner } from "./utils/appUtils";
+import { deriveActivePlayer, deriveGameBoard, deriveWinner } from "./utils/appUtils";
 
 function App() {
   const [players, setPlayers] = useState(PLAYERS);
   const [gameTurns, setGameTurns] = useState([]);
 
-  const activePlayer = derivaActivePlayer(gameTurns);
+  const activePlayer = deriveActivePlayer(gameTurns);
   const gameBoard = deriveGameBoard(gameTurns);
   const winner = deriveWinner(gameBoard, players);
   const hasDraw = gameTurns.length === 9 && !winner;
 
   function handleSelectSquare(rowIndex, colIndex) {
     setGameTurns((prevTurns) => {
-      const currentPlayer = derivaActivePlayer(prevTurns);
+      const currentPlayer = deriveActivePlayer(prevTurns);
       const updatedTurns = [
         { square: { row: rowIndex, col: colIndex }, player: currentPlayer },
         ...prevTurns,

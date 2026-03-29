@@ -1,7 +1,7 @@
 import { INITIAL_GAME_BOARD } from "../constants/appConstants";
 import { WINNING_COMBINATIONS } from "../constants/winning-combinations";
 
-export function derivaActivePlayer(gameTurns) {
+export function deriveActivePlayer(gameTurns) {
   let currentPlayer = "X";
   if (gameTurns.length > 0 && gameTurns[0].player === "X") {
     currentPlayer = "O";
